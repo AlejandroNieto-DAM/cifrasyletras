@@ -15,10 +15,10 @@ class Letra {
             this->puntuacion = puntuacion;
         }
     
-        inline char getCaracter() const { return this->caracter};
-        inline int getApariciones() const { return this->apariciones};
-        inline int getPuntuacion() const { return this->puntuacion};
+        inline char getCaracter() const { return this->caracter; };
+        inline int getApariciones() const { return this->apariciones; };
+        inline int getPuntuacion() const { return this->puntuacion; };
     
-}
+};
 
 #endif
