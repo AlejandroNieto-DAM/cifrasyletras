@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <set>
-#include "bolsaletras.h"
+#include "conjuntoletras.h"
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int main(int argc, char * argv[]){
         return 0;
     }
     
-    BolsaLetras D;
+    ConjuntoLetras D;
     cout << "Cargando letras..." << endl;
     f>>D;
     
