@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include <list>
-#include "bolsaletras.h"
+#include <vector>
+#include "conjuntoletras.h"
 #include <sstream> 
 #include <string>
 
@@ -10,10 +10,31 @@ using namespace std;
 
 
 void ConjuntoLetras::insertarLetra(Letra l){
-	bolsa.push_back(l);
+	conjunto.push_back(l);
 }
 
-istream & operator>>(istream & is, BolsaLetras &D){
+int ConjuntoLetras::getPuntuacionCaracter(char c){
+	vector<Letra>::iterator it;
+	for(it = conjunto.begin(); it != conjunto.end(); ++it){
+		if((*it).getCaracter() == c){
+			return (*it).getPuntuacion();
+		}
+	}
+
+	return -1;
+}
+
+int ConjuntoLetras::getPuntuacionPalabra(string palabra){
+	
+	int puntuacion = 0;
+	for(int i = 0; i < palabra.size(); i++){
+		puntuacion += getPuntuacionCaracter(palabra[i]);
+	}
+
+	return puntuacion;
+}
+
+istream & operator>>(istream & is, ConjuntoLetras &D){
     
     string line;
     getline(is, line);
@@ -28,17 +49,14 @@ istream & operator>>(istream & is, BolsaLetras &D){
 		getline(iss, token, '\t');
 
 	    char caracter = (char) token[0];
-	    //cout << "Letra: " << caracter << "\t";
 
 		getline(iss, token, '\t');
 
 	    int apariciones = stoi (token,&sz);
-	    //cout << "Apariciones: " << apariciones << "\t";
 
 		getline(iss, token, '\t');
 
 	    int valor = stoi (token,&sz);
-	    //cout << "Valor: " << valor << endl;
 
 	    Letra l(caracter, apariciones, valor);
 
@@ -50,13 +68,12 @@ istream & operator>>(istream & is, BolsaLetras &D){
     
 }
 
-ostream & operator<<(ostream & os, BolsaLetras &D){
-
-	//cout << "Cout de bolsaLetras"  << endl;
+ostream & operator<<(ostream & os, ConjuntoLetras &D){
 	
-    BolsaLetras::iterator it;
+	cout << "******* Puntuaciones Letras ********" << endl;
+    ConjuntoLetras::iterator it;
     for(it = D.begin(); it != D.end(); ++it){
-        cout << (*it).getCaracter() << " " << (*it).getApariciones() << " " <<  (*it).getPuntuacion() << endl;
+        cout << (*it).getCaracter() << "\t" <<  (*it).getPuntuacion() << endl;
     }
     
     return os;

@@ -1,27 +1,33 @@
 #ifndef __ConjuntoLetras_h_
 #define __ConjuntoLetras_h_
 
-#include <iostream>
-#include <set>
-#include "Letra.h"
+#include <iostream>     
+#include <vector>
+#include "letra.h"
+#include <string>
+
+using namespace std;
 
 class ConjuntoLetras {
     
     private:
-        list<Letra> bolsa;
+        vector<Letra> conjunto;
     
     public:
 
-
         void insertarLetra(Letra l);
 
-        friend istream & operator>>(istream & is, BolsaLetras &D);
+        int getPuntuacionPalabra(string palabra);
+
+        int getPuntuacionCaracter(char c);
+
+        friend istream & operator>>(istream & is,  ConjuntoLetras &D);
         
-        friend ostream & operator<<(ostream & os, BolsaLetras &D);
+        friend ostream & operator<<(ostream & os, ConjuntoLetras &D);
 
         class iterator{
             public:
-                list<Letra >::iterator it;
+                vector<Letra >::iterator it;
             
                 Letra operator *(){
                     return *it;
@@ -40,24 +46,24 @@ class ConjuntoLetras {
                     return i.it != it;
                 }
             
-                friend class BolsaLetras;
+                friend class ConjuntoLetras;
         };
 
         iterator begin() {
             iterator i;
-            i.it = this->bolsa.begin();
+            i.it = this->conjunto.begin();
             return i;
             
         }
     
         iterator end() {
             iterator i;
-            i.it = this->bolsa.end();
+            i.it = this->conjunto.end();
             return i;
         }
 
         
 
-}
+};
 
 #endif
