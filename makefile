@@ -1,23 +1,21 @@
 
-#visibildad - compatibilidad de tipos (peso importante) - 3ra pregunta de otra cosa - pregunta de resolver
-
-usoConjunto: usoBolsa.cpp conjuntoletras.cpp
-	g++ -std=c++11 -o usoConjunto usobolsa.cpp conjuntoletras.cpp
+usoConjunto: src/usoconjunto.cpp src/conjuntoletras.cpp
+	g++ -std=c++11 -o bin/usoConjunto src/usoconjunto.cpp src/conjuntoletras.cpp
 
 uc: usoConjunto
-	./usoConjunto ../adicional/letras.txt
+	bin/./usoConjunto datos/letras.txt
 
-usoDiccionario: testDiccionario.cpp diccionario.cpp
-	g++ -std=c++11 -o usoDiccionario testDiccionario.cpp diccionario.cpp
+usoDiccionario: src/testDiccionario.cpp src/diccionario.cpp
+	g++ -std=c++11 -o bin/usoDiccionario src/testDiccionario.cpp src/diccionario.cpp
 
 ud: usoDiccionario
-	./usoDiccionario ../adicional/diccionario1.txt
+	bin/./usoDiccionario datos/diccionario1.txt
 
-letras: main.cpp diccionario.cpp conjuntoletras.cpp bolsaletras.cpp
-	g++ -o letras main.cpp conjuntoletras.cpp diccionario.cpp bolsaletras.cpp
+letras: src/main.cpp src/diccionario.cpp src/conjuntoletras.cpp src/bolsaletras.cpp
+	g++ -o bin/letras src/main.cpp src/conjuntoletras.cpp src/diccionario.cpp src/bolsaletras.cpp
 
 exe_p: letras
-	./letras ../adicional/diccionario1.txt ../adicional/letras.txt 20 P
+	bin/./letras datos/diccionario1.txt datos/letras.txt 20 P
 
 exe_l: letras
-	./letras ../adicional/diccionario1.txt ../adicional/letras.txt 20 L
+	bin/./letras datos/diccionario1.txt datos/letras.txt 20 L
