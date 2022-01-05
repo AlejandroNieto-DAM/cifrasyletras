@@ -176,7 +176,7 @@ void displaySolutions(vector<pair<string,int> > respuestas, char modoJuego){
     		p = (*itv3).first.size();
     	}
 
-    	cout << (*itv3).first << " Puntuacion: " <<  << endl;
+    	cout << (*itv3).first << " Puntuacion: " << p << endl;
 	 	
 	 	if ((*itv3).second > lastMaxValue){
 	 		lastMaxValue = (*itv3).second;
