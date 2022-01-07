@@ -9,14 +9,32 @@ using namespace std;
 class BolsaLetras {
 
     private:
+    
         vector<char> caracteres;
 
     public:
 
+        /**
+         * @brief Inserta un nuevo caracter a la bolsa de caracteres
+         * 
+         * @param c es el nuevo caracter que se añadira a la bolsa
+         * @param veces es el numero de veces que quedara añadido el caracter
+         */
         void insertarCaracter(char c, int veces);
 
+        /**
+         * @brief Desordena el vector de caracteres
+         * 
+         */
         void shuffleBolsa();
 
+        /**
+         * @brief Metodo que obtiene el numeroDeLetras de caracteres de forma aleatoria
+         * y los almacena en un vector que devuelve
+         * 
+         * @param numeroDeLetras es el numero de letras que queremos obtener de forma aleatoria
+         * @return vector<char> es el vector resultante con los caracteres almacenados que han sido escogidos
+         */
         vector<char> getLetrasJuego(int numeroDeLetras);
 
         class iterator{
@@ -55,8 +73,7 @@ class BolsaLetras {
             i.it = this->caracteres.end();
             return i;
         }
-        
-        
+           
 };
 
 #endif

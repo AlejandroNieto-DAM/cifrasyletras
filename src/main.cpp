@@ -37,29 +37,35 @@ void setUpGame(char * argv[], Diccionario &D, ConjuntoLetras &CL, BolsaLetras &B
 void displaySolutions(vector<pair<string,int> > respuestas, char modoJuego);
 
 /**
+ * @brief Obtiene las palabras que se pueden formar a partir del vector de char que se da para realizar el juego.
+ * Este metodo se encarga de ir buscando todas las palabras que se pueden formar y obtener su puntuacion
  * 
- * 
- * 
- * 
- * 
- * 
- * */
+ * @param D es el diccionario en el que buscaremos las palabras que se pueden formar con letrasJuego
+ * @param CL es el conjunto de letras con el cual obtendremos las puntuaciones de las palabras que sean solucion
+ * @param numeroLetras es el numero de letras con el que el jugador empezo a jugar. Servirá de tamaño maximo de palabra
+ * ya que no habra una palabra mas larga que este numero
+ * @param letrasJuego es el vector de char que contiene los caracteres mostrados al usuario para el juego
+ * @return vector<pair<string,int> > devuelve este tipo de vector que almacena pair con las palabras solucion y sus respectivas puntuaciones
+ * obtenidas del conjunto de letras
+ */
 vector<pair<string,int> > getSoluciones(Diccionario D, ConjuntoLetras CL, int numeroLetras, vector<char> letrasJuego);
 
-
 /**
+ * @brief Comprueba si una palabra contiene exclusivamente los caracteres usados para el juego 
+ * (tambien tiene en cuenta la repeticion ya que si el caracter "a" solo aparece una vez en el juego
+ * este no se puede usar dos veces para obtener la palabra "cama" por ejemplo y "cama" seria invalida)
  * 
- * 
- * 
- * 
- * 
- * 
- * */
+ * @param palabra es la palabra que queremos comprobar si es valida
+ * @param letrasJuego son los caracteres usados para el juego
+ * @return true si la palanbra se puede formar a partir de los caracteres usados en el juego
+ * @return false si la palabra no puede ser formada a partir de los caracteres usados para el juego
+ */
 bool comprobarSiUnaPalabraEsValida(string palabra, vector<char> letrasJuego);
 
 
 int main(int argc, char * argv[]){
 
+	//Comprueba que los argumentos estan de forma correcta
 	if(argc != 5){
 		cout << "Ejecución invalida!!" << endl;
         cout << "El modo de ejecución es:"<< endl;
@@ -84,6 +90,8 @@ int main(int argc, char * argv[]){
 		
 		vector<char> letrasJuego = BL.getLetrasJuego(numeroLetras);
 		vector<char>::iterator it;
+
+		//Mostramos al usuario las letras del juego
 		cout << "Las letras son: " << endl;
 		for(it = letrasJuego.begin(); it != letrasJuego.end(); ++it){
 			cout << *it << " ";
@@ -97,8 +105,12 @@ int main(int argc, char * argv[]){
 		cout << endl;
 
 		int p;
+		//Comprobamos si la respuesta del usuario existe en el Diccionario
 		if(D.Esta(respuestaUsuario)){
-			
+
+			//Dependiendo del modo de juego mostraremos una puntuacion u otra
+			//Si es modo de juego es P nos basaremos en el conjunto de letras
+			//si el modo de juego es L mostraremos como puntuacion la longitud de la palabra
 			if(modoJuego == 'P'){
 				p = CL.getPuntuacionPalabra(respuestaUsuario);	
 			} else {
@@ -106,6 +118,7 @@ int main(int argc, char * argv[]){
 			}
 
 			cout << respuestaUsuario << " Puntuacion: " << p << endl;
+			
 	    } else {
 	        cout << "No existe esa palabra" << endl;
 	    }

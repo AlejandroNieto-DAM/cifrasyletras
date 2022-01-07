@@ -5,9 +5,7 @@
 #include <sstream> 
 #include <string>
 
-
 using namespace std;
-
 
 void ConjuntoLetras::insertarLetra(Letra l){
 	conjunto.push_back(l);

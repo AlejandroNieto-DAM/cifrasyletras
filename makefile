@@ -20,3 +20,9 @@ exe_p: letras
 
 exe_l: letras
 	bin/./letras datos/diccionario1.txt datos/letras.txt 20 L
+
+cantidad_letras: src/cantidad_letras.cpp
+	g++ -I$(INCLUDE) -o bin/cantidad_letras src/cantidad_letras.cpp
+
+exe_cl: cantidad_letras
+	bin/./cantidad_letras datos/diccionario1.txt datos/letras_solas.txt datos/salida.txt

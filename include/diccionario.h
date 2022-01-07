@@ -13,7 +13,14 @@ class Diccionario{
         @brief Construye un diccionario vacío.
         **/
         Diccionario();
-    
+
+        /**
+         * @brief Añade una nueva palabra al diccionario si esta no estaba
+         * 
+         * @param palabra es la nueva palabra que se quiere añadir 
+         * @return true si se ha podido añadir la palabra (no existia en el diccionario)
+         * @return false si no se ha podido añadir la palabra (existia en el diccionario)
+         */
         bool insertarPalabra(string palabra);
 
         /**
