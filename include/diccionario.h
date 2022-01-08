@@ -1,6 +1,7 @@
 #ifndef __Diccionario_h__
 #define __Diccionario_h__
 #include <set>
+#include <vector>
 #include <string>
 
 using namespace std;
