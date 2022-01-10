@@ -1,0 +1,68 @@
+\hypertarget{bolsaletras_8h_source}{}\doxysection{bolsaletras.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_BolsaLetras\_h\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_BolsaLetras\_h\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_bolsa_letras}{BolsaLetras}} \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     }
+\DoxyCodeLine{13         vector<char> caracteres;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{23         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bolsa_letras_a29b56a2a6c2466659fbf7e1b87eebaff}{insertarCaracter}}(\textcolor{keywordtype}{char} c, \textcolor{keywordtype}{int} veces);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bolsa_letras_a3a28f6c828ec11fe6b3d5b01c7b90fb4}{shuffleBolsa}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{38         vector<char> \mbox{\hyperlink{class_bolsa_letras_ac79059c349024a3caa59d199992fd260}{getLetrasJuego}}(\textcolor{keywordtype}{int} numeroDeLetras);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \textcolor{keyword}{class }\mbox{\hyperlink{class_bolsa_letras_1_1iterator}{iterator}}\{}
+\DoxyCodeLine{41             \textcolor{keyword}{public}:}
+\DoxyCodeLine{42                 vector<char >::iterator it;}
+\DoxyCodeLine{43             }
+\DoxyCodeLine{44                 \textcolor{keywordtype}{char} operator *()\{}
+\DoxyCodeLine{45                     \textcolor{keywordflow}{return} *it;}
+\DoxyCodeLine{46                 \}}
+\DoxyCodeLine{47             }
+\DoxyCodeLine{48                 \mbox{\hyperlink{class_bolsa_letras_1_1iterator}{iterator}} \& operator ++()\{}
+\DoxyCodeLine{49                     ++it;}
+\DoxyCodeLine{50                     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{51                 \}}
+\DoxyCodeLine{52             }
+\DoxyCodeLine{53                 \textcolor{keywordtype}{bool} operator ==(\textcolor{keyword}{const} \mbox{\hyperlink{class_bolsa_letras_1_1iterator}{iterator}} \&i)\{}
+\DoxyCodeLine{54                     \textcolor{keywordflow}{return} i.it == it;}
+\DoxyCodeLine{55                 \}}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57                 \textcolor{keywordtype}{bool} operator !=(\textcolor{keyword}{const} \mbox{\hyperlink{class_bolsa_letras_1_1iterator}{iterator}} \&i)\{}
+\DoxyCodeLine{58                     \textcolor{keywordflow}{return} i.it != it;}
+\DoxyCodeLine{59                 \}}
+\DoxyCodeLine{60             }
+\DoxyCodeLine{61                 \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_bolsa_letras}{BolsaLetras}};}
+\DoxyCodeLine{62         \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \mbox{\hyperlink{class_bolsa_letras_1_1iterator}{iterator}} begin() \{}
+\DoxyCodeLine{65             \mbox{\hyperlink{class_bolsa_letras_1_1iterator}{iterator}} i;}
+\DoxyCodeLine{66             i.it = this-\/>caracteres.begin();}
+\DoxyCodeLine{67             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{68             }
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70     }
+\DoxyCodeLine{71         iterator end() \{}
+\DoxyCodeLine{72             iterator i;}
+\DoxyCodeLine{73             i.it = this-\/>caracteres.end();}
+\DoxyCodeLine{74             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76            }
+\DoxyCodeLine{77 \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{80 }
+
+\end{DoxyCode}

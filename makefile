@@ -16,7 +16,7 @@ letras: src/main.cpp src/diccionario.cpp src/conjuntoletras.cpp src/bolsaletras.
 	g++ -I$(INCLUDE) -o bin/letras src/main.cpp src/conjuntoletras.cpp src/diccionario.cpp src/bolsaletras.cpp
 
 exe_p: letras
-	bin/./letras datos/diccionario1.txt datos/letras.txt 20 P
+	bin/./letras datos/diccionario1.txt datos/salida.txt 20 P
 
 exe_l: letras
 	bin/./letras datos/diccionario1.txt datos/letras.txt 20 L

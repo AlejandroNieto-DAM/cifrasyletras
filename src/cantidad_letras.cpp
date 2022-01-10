@@ -55,7 +55,9 @@ int main(int argc, char * argv[]){
     bool found;
     //Leemos valores del archivo de letras, cogiendo solo la primera letra de una linea si hay multiples
     while (getline(ifLet, line)){
-      aux = {line[0],0,0};
+      aux.id = line[0];
+      aux.cantidad = 0;
+      aux.puntos  = 0;
       caracteres.push_back(aux);
     }
 

@@ -1,0 +1,74 @@
+\hypertarget{conjuntoletras_8h_source}{}\doxysection{conjuntoletras.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_ConjuntoLetras\_h\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_ConjuntoLetras\_h\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}     }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}letra.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_conjunto_letras}{ConjuntoLetras}} \{}
+\DoxyCodeLine{12     }
+\DoxyCodeLine{13     \textcolor{keyword}{private}:}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{comment}{//Vector que almacenará objetos Letra}}
+\DoxyCodeLine{16         vector<Letra> conjunto;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{24         \textcolor{keywordtype}{int} getPuntuacionCaracter(\textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     \textcolor{keyword}{public}:}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_conjunto_letras_a95e9ff7b6f44b2a361e0be15b452e39e}{insertarLetra}}(\mbox{\hyperlink{class_letra}{Letra}} l);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_conjunto_letras_a4967d13e4c69ddccff5e0badccdab3e4}{getPuntuacionPalabra}}(\textcolor{keywordtype}{string} palabra);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{50         \textcolor{keyword}{friend} istream \& \mbox{\hyperlink{class_conjunto_letras_ae53b5c0196010edd2d9264bf011cc9bc}{operator>>}}(istream \& is,  \mbox{\hyperlink{class_conjunto_letras}{ConjuntoLetras}} \&D);}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{59         \textcolor{keyword}{friend} ostream \& \mbox{\hyperlink{class_conjunto_letras_a71525e75e70847563d54936e612d0678}{operator<<}}(ostream \& os, \mbox{\hyperlink{class_conjunto_letras}{ConjuntoLetras}} \&D);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         \textcolor{keyword}{class }\mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}}\{}
+\DoxyCodeLine{62             \textcolor{keyword}{public}:}
+\DoxyCodeLine{63                 vector<Letra >::iterator it;}
+\DoxyCodeLine{64             }
+\DoxyCodeLine{65                 \mbox{\hyperlink{class_letra}{Letra}} operator *()\{}
+\DoxyCodeLine{66                     \textcolor{keywordflow}{return} *it;}
+\DoxyCodeLine{67                 \}}
+\DoxyCodeLine{68             }
+\DoxyCodeLine{69                 \mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} \& operator ++()\{}
+\DoxyCodeLine{70                     ++it;}
+\DoxyCodeLine{71                     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{72                 \}}
+\DoxyCodeLine{73             }
+\DoxyCodeLine{74                 \textcolor{keywordtype}{bool} operator ==(\textcolor{keyword}{const} \mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} \&i)\{}
+\DoxyCodeLine{75                     \textcolor{keywordflow}{return} i.it == it;}
+\DoxyCodeLine{76                 \}}
+\DoxyCodeLine{77     }
+\DoxyCodeLine{78                 \textcolor{keywordtype}{bool} operator !=(\textcolor{keyword}{const} \mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} \&i)\{}
+\DoxyCodeLine{79                     \textcolor{keywordflow}{return} i.it != it;}
+\DoxyCodeLine{80                 \}}
+\DoxyCodeLine{81             }
+\DoxyCodeLine{82                 \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_conjunto_letras}{ConjuntoLetras}};}
+\DoxyCodeLine{83         \};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85         \mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} begin() \{}
+\DoxyCodeLine{86             \mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} i;}
+\DoxyCodeLine{87             i.it = this-\/>conjunto.begin();}
+\DoxyCodeLine{88             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{89             }
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91     }
+\DoxyCodeLine{92         iterator end() \{}
+\DoxyCodeLine{93             iterator i;}
+\DoxyCodeLine{94             i.it = this-\/>conjunto.end();}
+\DoxyCodeLine{95             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

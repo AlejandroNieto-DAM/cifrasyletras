@@ -1,0 +1,111 @@
+\hypertarget{class_conjunto_letras}{}\doxysection{Conjunto\+Letras Class Reference}
+\label{class_conjunto_letras}\index{ConjuntoLetras@{ConjuntoLetras}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_conjunto_letras_a95e9ff7b6f44b2a361e0be15b452e39e}{insertar\+Letra}} (\mbox{\hyperlink{class_letra}{Letra}} l)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo objeto \mbox{\hyperlink{class_letra}{Letra}} al conjunto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_conjunto_letras_a4967d13e4c69ddccff5e0badccdab3e4}{get\+Puntuacion\+Palabra}} (string palabra)
+\begin{DoxyCompactList}\small\item\em Calcula la puntuacion de una palabra buscando caracter por caracter en el conjunto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_conjunto_letras_afb70b04e316e92b3ab256962686c770e}\label{class_conjunto_letras_afb70b04e316e92b3ab256962686c770e}} 
+\mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{class_conjunto_letras_a6523e6639d58d5aad12d7f8b876da10d}\label{class_conjunto_letras_a6523e6639d58d5aad12d7f8b876da10d}} 
+\mbox{\hyperlink{class_conjunto_letras_1_1iterator}{iterator}} {\bfseries end} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \mbox{\hyperlink{class_conjunto_letras_ae53b5c0196010edd2d9264bf011cc9bc}{operator$>$$>$}} (istream \&is, \mbox{\hyperlink{class_conjunto_letras}{Conjunto\+Letras}} \&D)
+\begin{DoxyCompactList}\small\item\em Lee de un flujo de entrada un diccionario. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_conjunto_letras_a71525e75e70847563d54936e612d0678}{operator$<$$<$}} (ostream \&os, \mbox{\hyperlink{class_conjunto_letras}{Conjunto\+Letras}} \&D)
+\begin{DoxyCompactList}\small\item\em Escribe en un flujo de salida un diccionario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_conjunto_letras_a4967d13e4c69ddccff5e0badccdab3e4}\label{class_conjunto_letras_a4967d13e4c69ddccff5e0badccdab3e4}} 
+\index{ConjuntoLetras@{ConjuntoLetras}!getPuntuacionPalabra@{getPuntuacionPalabra}}
+\index{getPuntuacionPalabra@{getPuntuacionPalabra}!ConjuntoLetras@{ConjuntoLetras}}
+\doxysubsubsection{\texorpdfstring{getPuntuacionPalabra()}{getPuntuacionPalabra()}}
+{\footnotesize\ttfamily int Conjunto\+Letras\+::get\+Puntuacion\+Palabra (\begin{DoxyParamCaption}\item[{string}]{palabra }\end{DoxyParamCaption})}
+
+
+
+Calcula la puntuacion de una palabra buscando caracter por caracter en el conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em palabra} & es la palabra de la cual queremos saber la puntuacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int es el resultado obtenido de la puntuacion de la palabra 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_conjunto_letras_a95e9ff7b6f44b2a361e0be15b452e39e}\label{class_conjunto_letras_a95e9ff7b6f44b2a361e0be15b452e39e}} 
+\index{ConjuntoLetras@{ConjuntoLetras}!insertarLetra@{insertarLetra}}
+\index{insertarLetra@{insertarLetra}!ConjuntoLetras@{ConjuntoLetras}}
+\doxysubsubsection{\texorpdfstring{insertarLetra()}{insertarLetra()}}
+{\footnotesize\ttfamily void Conjunto\+Letras\+::insertar\+Letra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_letra}{Letra}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Inserta un nuevo objeto \mbox{\hyperlink{class_letra}{Letra}} al conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & es el nuevo objeto que se añadira \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_conjunto_letras_a71525e75e70847563d54936e612d0678}\label{class_conjunto_letras_a71525e75e70847563d54936e612d0678}} 
+\index{ConjuntoLetras@{ConjuntoLetras}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ConjuntoLetras@{ConjuntoLetras}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_conjunto_letras}{Conjunto\+Letras}} \&}]{D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Escribe en un flujo de salida un diccionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os\+:flujo} & de salida \\
+\hline
+{\em D} & el objeto diccionario que se escribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el flujo de salida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_conjunto_letras_ae53b5c0196010edd2d9264bf011cc9bc}\label{class_conjunto_letras_ae53b5c0196010edd2d9264bf011cc9bc}} 
+\index{ConjuntoLetras@{ConjuntoLetras}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ConjuntoLetras@{ConjuntoLetras}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_conjunto_letras}{Conjunto\+Letras}} \&}]{D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Lee de un flujo de entrada un diccionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+:flujo} & de entrada \\
+\hline
+{\em D} & el objeto donde se realiza la lectura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el flujo de entrada 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+conjuntoletras.\+h\end{DoxyCompactItemize}
